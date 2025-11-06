@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="style.css">
+        <title>City API</title>
+    </head>
+    <body>
+        <header class="container">
+            <div class="logo">Hyanx</div>
+            <form class="search-form">
+                <input type="search" placeholder="Enter the city name..."
+                    required>
+                <button type="submit">Search</button>
+            </form>
+        </header>
+        <div class="container container-special">
+            <div class="boxes">
+                <div class="box">
+                    <img
+                        src="https://images.unsplash.com/photo-1602828889956-45ec6cee6758?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjY2MDd8MHwxfHNlYXJjaHwxfHxOZXdZb3JrfGVufDB8fHx8MTc2MjM1NjYzNnww&ixlib=rb-4.1.0&q=80&w=400"
+                        alt>
+                    <div class="info">
+                        <div>
+                            <h3>New York</h3>
+                            <p>italy</p>
+                        </div>
+                        <button class="more">See More
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="box">
+                    <img
+                        src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjY2MDd8MHwxfHNlYXJjaHwyfHxEdWJhaXxlbnwwfHx8fDE3NjIzNzg5OTZ8MA&ixlib=rb-4.1.0&q=80&w=400"
+                        alt>
+                    <div class="info">
+                        <div>
+                            <h3>Dubai</h3>
+                            <p>Emirates</p>
+                        </div>
+                        <button class="more">See More
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="box">
+                    <img
+                        src="https://images.unsplash.com/photo-1553913861-c0fddf2619ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjY2MDd8MHwxfHNlYXJjaHwyfHxDYWlyb3xlbnwwfHx8fDE3NjIzNzgxNDN8MA&ixlib=rb-4.1.0&q=80&w=400"
+                        alt>
+                    <div class="info">
+                        <div>
+                            <h3>Cairo</h3>
+                            <p>Egypt</p>
+                        </div>
+                        <button class="more">See More
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="box">
+                    <img
+                        src="https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjY2MDd8MHwxfHNlYXJjaHwxfHxSaXlhZGh8ZW58MHx8fHwxNzYyMzc4NDc0fDA&ixlib=rb-4.1.0&q=80&w=400"
+                        alt>
+                    <div class="info">
+                        <div>
+                            <h3>Riyadh</h3>
+                            <p>Saudi Arabia</p>
+                        </div>
+                        <button class="more">See More
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="box">
+                    <img
+                        src="https://images.unsplash.com/photo-1591606968395-e9561e379def?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjY2MDd8MHwxfHNlYXJjaHwxfHxSYWJhdHxlbnwwfHx8fDE3NjIzNzg1NjN8MA&ixlib=rb-4.1.0&q=80&w=400"
+                        alt>
+                    <div class="info">
+                        <div>
+                            <h3>Rabat</h3>
+                            <p>Morroco</p>
+                        </div>
+                        <button class="more">See More
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="box">
+                    <img
+                        src="https://images.unsplash.com/photo-1660479643214-8ceae9caeda0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MjY2MDd8MHwxfHNlYXJjaHwyfHxnYXphfGVufDB8fHx8MTc2MjM3ODY3MHww&ixlib=rb-4.1.0&q=80&w=400"
+                        alt>
+                    <div class="info">
+                        <div>
+                            <h3>Gaza</h3>
+                            <p>Palestine</p>
+                        </div>
+                        <button class="more">See More
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="overlay ">
+            <div class="popup">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide reload swiper-slide-active"
+                            role="group" aria-label="1 / 10"><div
+                                class="skeleton-box"></div></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="popup-content">
+                        <h2>City Name</h2>
+                        <p class="population">Population: </p>
+                        <div class="country">country: </div>
+                        <button class="close-btn">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <script src="main.js"></script>
+            <script
+                src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+        </body>
+    </html>
