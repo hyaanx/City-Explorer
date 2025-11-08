@@ -308,16 +308,15 @@ p.loading {
   display: none;
   align-items: center;
 
-  h3 { 
+  h3 {
     color: red;
   }
 
-  button { 
+  button {
     margin: 0px !important;
   }
 }
 
-/* Tablet */
 @media (min-width: 768px) {
   .container {
     width: 85%; /* Slightly narrower on tablets */
@@ -357,5 +356,11 @@ p.loading {
     img {
       max-height: none;
     }
+  }
+}
+
+@media (max-width: 500px) {
+  .popup {
+    width: 90% !important;
   }
 }
