@@ -10,11 +10,6 @@ A web application that allows users to search for cities, view city information 
 - [Screenshot](#screenshot)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [API Keys](#api-keys)
-- [Contributing](#contributing)
-- [License](#license)
 
 ---
 
@@ -26,7 +21,7 @@ You can see the live demo here: *(Add your deployed link here)*
 
 ## Screenshot
 
-![City Explorer Screenshot](image/Screenshot.png)
+![City Explorer Screenshot](Image/Screenshot.png)
 
 > Replace `assets/screenshot.png` with the actual path to your screenshot.
 
@@ -56,12 +51,3 @@ You can see the live demo here: *(Add your deployed link here)*
 - **[Unsplash API](https://unsplash.com/developers)** – City images.
 - **[API Ninjas City API](https://api.api-ninjas.com/)** – City information (population, country).
 
----
-
-## Installation
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/city-explorer.git
-cd city-explorer

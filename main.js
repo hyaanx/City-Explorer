@@ -4,7 +4,9 @@ const overlay = document.querySelector(".overlay");
 const swiperWrapper = document.querySelector(".swiper-wrapper");
 const boxesContainer = document.querySelector(".boxes");
 const popupContent = document.querySelector(".popup-content");
-let closeBtn = document.querySelector(".close-btn");
+const errorMsg = document.querySelector(".error");
+const swiper = document.querySelector(".swiper");
+const closeBtn = document.querySelectorAll(".close-btn");
 
 // Function to create a skeleton card
 function createSkeletonCard() {
@@ -103,22 +105,19 @@ async function fetchCityInfo(city) {
     populationEl.textContent = `Population: ${cityInfo.population}`;
     countryEl.textContent = `Country: ${cityInfo.country}`;
   } catch (error) {
-    document.querySelector(".close-btn").style.display =
-      popupContent.innerHTML = `
-      <div class="error">
-        <h3>City not found</h3>
-        <button class="close-btn"><i class="fa-solid fa-xmark"></i></button>
-      </div>
-    `;
-    attachCloseEvent();
+    swiper.style.display = "none";
+    errorMsg.style.display = "flex";
+
+    attachCloseEvent(document.querySelector(".close-btn"));
   }
 }
 
 // Attach close button event
 function attachCloseEvent() {
-  closeBtn = document.querySelector(".close-btn");
-  closeBtn?.addEventListener("click", () => {
-    overlay.classList.remove("active");
+  closeBtn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      overlay.classList.remove("active");
+    });
   });
 }
 
@@ -127,6 +126,8 @@ attachCloseEvent();
 // ----------------------------------------------------
 function handleCitySearch(city) {
   if (!city) return;
+  swiper.style.display = "block";
+  errorMsg.style.display = "none";
 
   overlay.classList.add("active");
   fetchCityInfo(city);
